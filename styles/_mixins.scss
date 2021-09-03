@@ -1,0 +1,22 @@
+@mixin media-query($breakpoint) {
+    @if $breakpoint == mobile {
+        @media only screen and (max-width: 23.4375rem) {
+            // 375px
+            @content;
+        }
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 90rem) {
+            // 1440
+            @content;
+        }
+    }
+}
+
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $color) {
+    box-shadow: $horizontal $vertical $blur $spread $color;
+    -webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+    -moz-box-shadow: $horizontal $vertical $blur $spread $color;
+    -ms-box-shadow: $horizontal $vertical $blur $spread $color;
+}
